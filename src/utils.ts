@@ -8,7 +8,7 @@ export const multiplyBy = (value: number) => {
 };
 
 export const replaceCapitalLetter = (letter: string) => {
-  return `-${letter.toLowerCase}`;
+  return `-${letter.toLowerCase()}`;
 };
 
 export const parseStyleKey = (key: string) => {

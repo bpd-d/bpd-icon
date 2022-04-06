@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
+  <style>
+    :root {
+      --cui-icon-color: limegreen;
+    }
+
+    .custom-icon {
+      --cui-icon-color: hsl(200, 50%, 30%);
+    }
+  </style>
   <body>
     <div id="app"></div>
     <cui-icon name="checkmark"></cui-icon>
@@ -14,6 +23,9 @@
     <cui-icon name="checkmark" ratio="3" color="pink"></cui-icon>
     <cui-icon name="checkmark" ratio="4" color="purple"></cui-icon>
     <cui-icon name="checkmark" ratio="5" color="green"></cui-icon>
+    <div class="custom-icon">
+      <cui-icon name="checkmark" ratio="2"></cui-icon>
+    </div>
     <script type="module" src="/src/index.ts"></script>
   </body>
 </html>
