@@ -14,6 +14,10 @@
     .custom-icon {
       --cui-icon-color: hsl(200, 50%, 30%);
     }
+
+    .custom-inline-icon {
+      --cui-icon-color: hsl(313, 50%, 50%);
+    }
   </style>
   <body>
     <div id="app"></div>
@@ -25,6 +29,13 @@
     <cui-icon name="checkmark" ratio="5" color="green"></cui-icon>
     <div class="custom-icon">
       <cui-icon name="checkmark" ratio="2"></cui-icon>
+    </div>
+    <div>
+      <cui-icon
+        class="custom-inline-icon"
+        name="checkmark"
+        ratio="2"
+      ></cui-icon>
     </div>
     <script type="module" src="/src/index.ts"></script>
   </body>

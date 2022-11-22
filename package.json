@@ -1,14 +1,30 @@
 {
-  "name": "cui-icon",
+  "name": "bpd-icon",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "keywords": [
+    "icons",
+    "svg",
+    "cUI",
+    "BPDev"
+  ],
   "devDependencies": {
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
+  },
+  "files": [
+    "/dist/cuiIcon.js"
+  ],
+  "author": "bpd-dev",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/bpd-d/bpd-icon#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpd-d/bpd-icon.git"
   }
 }
