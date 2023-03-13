@@ -20,6 +20,7 @@ where:
 
 - $ratio - is a mulitplier for icon size. Value is multiplied by 20 and set as width and height
 - $color - any valid CSS color string - black is default
+- $padding - number - 2 is default - amount of padding in px added to host element
 
 ## Use custom CSS variables
 
@@ -43,5 +44,6 @@ In yout main script call this line:
 For more details about icons visit library github page:
 https://github.com/bpd-d/cui-icons
 
-## Create wrapper 
-In case you want control 
+## Create wrapper
+
+In case you want control
