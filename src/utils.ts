@@ -1,4 +1,4 @@
-import { CAPITAL_LETTER_REGEX } from "./constants";
+import { CAPITAL_LETTER_REGEX, DEFAULT_COLOR } from "./constants";
 import { IStyleAttributes, StyleOptions } from "./interfaces";
 
 export const multiplyBy = (value: number) => {
@@ -47,18 +47,48 @@ export const buildStyleObject = (
   styleAttributes: IStyleAttributes,
   options: StyleOptions
 ) => {
-  return {
+  const style = {
     display: "inline-block",
     width: `${prepareValue(styleAttributes.ratio, "1", multiplyBy(20))}px`,
     height: `${prepareValue(styleAttributes.ratio, "1", multiplyBy(20))}px`,
     fill: "none",
     stroke: `${prepareValue(
       styleAttributes.color,
-      `var(--${options.prefix}-icon-color, black)`
+      `var(--${options.prefix}-icon-color, ${DEFAULT_COLOR})`
     )}`,
     strokeOpacity: "1",
     strokeWidth: `${prepareValue(styleAttributes.stroke, "1")}px`,
     strokeLinecap: "round",
     strokeLinejoin: "miter",
+    transform: `rotate(${styleAttributes.rotation ?? 0}deg)`,
+  };
+  return style;
+};
+
+export const buildAccentNodeObject = (
+  styleAttributes: IStyleAttributes,
+  options: StyleOptions
+) => {
+  const baseColor = `${prepareValue(
+    styleAttributes.color,
+    `var(--${options.prefix}-icon-color, ${DEFAULT_COLOR})`
+  )}`;
+  return {
+    stroke: prepareValue(
+      styleAttributes.accent,
+      `var(--${options.prefix}-icon-accent, ${baseColor})`
+    ),
+  };
+};
+
+export const buildFillNodeObject = (
+  styleAttributes: IStyleAttributes,
+  options: StyleOptions
+) => {
+  return {
+    fill: prepareValue(
+      styleAttributes.fill,
+      `var(--${options.prefix}-icon-fill, none)`
+    ),
   };
 };
