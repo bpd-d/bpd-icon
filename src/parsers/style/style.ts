@@ -5,5 +5,11 @@ export default function getStyle(
   styleAttributes: IStyleAttributes,
   options: StyleOptions
 ) {
-  return parseStyleObject("svg", buildStyleObject(styleAttributes, options));
+  return [
+    parseStyleObject(":host", {
+      display: "inline-flex",
+      padding: `${styleAttributes.padding ?? 2}px`,
+    }),
+    parseStyleObject("svg", buildStyleObject(styleAttributes, options)),
+  ].join(" ");
 }

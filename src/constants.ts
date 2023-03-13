@@ -16,6 +16,7 @@ export const SUPPORTED_ELEMENT_ATTRIBUTES: (keyof IStyleAttributes)[] = [
   "name",
   "ratio",
   "stroke",
+  "padding",
 ];
 
 export const INITIAL_ICON_STYLE: IStyleAttributes = {
@@ -23,4 +24,5 @@ export const INITIAL_ICON_STYLE: IStyleAttributes = {
   ratio: null,
   name: null,
   stroke: null,
+  padding: null,
 };
