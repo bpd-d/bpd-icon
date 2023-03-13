@@ -6,6 +6,7 @@ export interface IStyleAttributes {
   ratio: string | null;
   stroke: string | null;
   color: string | null;
+  padding: string | null;
 }
 
 export type IconParserOption = "xml" | "json" | IconParserCallback;
