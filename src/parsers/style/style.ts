@@ -1,5 +1,14 @@
+import {
+  ACCENT_DEFAULT_SELECTOR,
+  FILL_DEFAULT_SELECTOR,
+} from "../../constants";
 import { StyleOptions, IStyleAttributes } from "../../interfaces";
-import { buildStyleObject, parseStyleObject } from "../../utils";
+import {
+  buildAccentNodeObject,
+  buildFillNodeObject,
+  buildStyleObject,
+  parseStyleObject,
+} from "../../utils";
 
 export default function getStyle(
   styleAttributes: IStyleAttributes,
@@ -11,5 +20,15 @@ export default function getStyle(
       padding: `${styleAttributes.padding ?? 2}px`,
     }),
     parseStyleObject("svg", buildStyleObject(styleAttributes, options)),
-  ].join(" ");
+    parseStyleObject(
+      styleAttributes.fillSelector ?? FILL_DEFAULT_SELECTOR,
+      buildFillNodeObject(styleAttributes, options)
+    ),
+    parseStyleObject(
+      styleAttributes.accentSelector ?? ACCENT_DEFAULT_SELECTOR,
+      buildAccentNodeObject(styleAttributes, options)
+    ),
+  ]
+    .filter(Boolean)
+    .join(" ");
 }

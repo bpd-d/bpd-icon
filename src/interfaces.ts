@@ -7,6 +7,11 @@ export interface IStyleAttributes {
   stroke: string | null;
   color: string | null;
   padding: string | null;
+  accent: string | null;
+  accentSelector: string | null;
+  fill: string | null;
+  fillSelector: string | null;
+  rotation: string | null;
 }
 
 export type IconParserOption = "xml" | "json" | IconParserCallback;

@@ -15,12 +15,17 @@ where options
 
 - prefix - custom prefix value. Default is 'cui'
 
-In your html use `<cui-icon name="your-icon-name" ratio="$ratio" color="$color"></cui-icon>`
+In your html use `<cui-icon name="your-icon-name" ratio="$ratio" color="$color" padding="$padding" fill="$fill" fillSelector="$fillSelector"></cui-icon>`
 where:
 
 - $ratio - is a mulitplier for icon size. Value is multiplied by 20 and set as width and height
 - $color - any valid CSS color string - black is default
 - $padding - number - 2 is default - amount of padding in px added to host element
+- $fillSelector - selector pointing paths which can be filled with color
+- $fill - color - color to fill paths with given fillSelector - none is default
+- $accentSelector - selector for paths which can be colored with accent color
+- $accent - color
+- $rotatation - 0-360 - value that icon shall be rotated by
 
 ## Use custom CSS variables
 
